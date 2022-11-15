@@ -7,7 +7,7 @@ if(isset($_SESSION['login_user_sys'])){
     }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,6 @@ if(isset($_SESSION['login_user_sys'])){
     <!--FORM_VALIDATION START-->
     <?php include("recursos/form_validation.php")?>
     <!--FORM_VALIDATION END-->
-
     <h3>Introduzca sus datos</h3>
     <!--FORM START-->
     <form name="form" action="#" method="POST">

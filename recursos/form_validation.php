@@ -1,5 +1,5 @@
 <?php
-session_start();//iniciamos session
+session_start();
 $username= $password= $error = "";
 
 if(isset($_POST['submit'])){
@@ -25,5 +25,4 @@ if(isset($_POST['submit'])){
         }
     }
 }
-
 ?>
