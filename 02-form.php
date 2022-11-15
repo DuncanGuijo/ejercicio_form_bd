@@ -18,6 +18,7 @@ if(isset($_SESSION['login_user_sys'])){
     <?php include("recursos/form_validation.php")?>
     <!--FORM_VALIDATION END-->
     <h3>Introduzca sus datos</h3>
+
     <!--FORM START-->
     <form name="form" action="#" method="POST">
         <fieldset>
@@ -31,7 +32,23 @@ if(isset($_SESSION['login_user_sys'])){
     <?php echo "$error";?>
     <!--FORM END-->
 
+    <!--REGISTRO START-->
+    <h3>Nuevo registro</h3>
+    <form action="<?$_SERVER['PHP_SELF'];?>" method="POST">
+        <fieldset>
+        <label for="nombreR">Nombre:</label>
+        <input type="text" class="form-control"  name="nombreR "placeholder="Nombre" />
+        <label for="apellidoR">Apellidos:</label>
+        <input type="text" class="form-control"  name="apellidoR"placeholder="Apellido" />
+        <label for="userR">Usuario:</label>
+        <input type="text" class="form-control"  name="userR"placeholder="Usuario" />
+        <label for="claveR">Contraseña:</label>
+        <input type="password" class="form-control"  name="claveR"placeholder="Clave" />
+        <input type="submit" name="registrar" value="Registrar">        
+        </fieldset>
+    </form>
 
+    
 
 </head>
 <body>

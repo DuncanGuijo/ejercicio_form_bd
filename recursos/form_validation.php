@@ -16,10 +16,9 @@ if(isset($_POST['submit'])){
         //con rows cuantificamos el numero de filas del resultado
         $counter = mysqli_num_rows($query);
     if($counter==1){
-            //confirmamos username en SESSION
+            //guardamos username en SESSION
             $_SESSION['login_user_sys']=$username;
             header("location: sesion_iniciada.php"); //EN CASO DE QUERER REDIRECCIONAR LA PAG
-
         }else{
             $error = "Usuario o contraseña no validas.";
         }
