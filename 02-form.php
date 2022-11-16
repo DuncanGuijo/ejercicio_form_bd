@@ -1,5 +1,4 @@
 <?php
-include("recursos/session.php");
 if(isset($_SESSION['login_user_sys'])){
     header("location: sesion_iniciada.php");
     }
@@ -15,7 +14,7 @@ if(isset($_SESSION['login_user_sys'])){
     <!--FORM_VALIDATION START-->
     <?php include("recursos/form_validation.php")?>
     <!--FORM_VALIDATION END-->
-    <h3>Introduzca sus datos</h3>
+    <h3>Introduzca sus datos para iniciar sesión</h3>
 
     <!--FORM START-->
     <form name="form" action="#" method="POST">
@@ -30,22 +29,31 @@ if(isset($_SESSION['login_user_sys'])){
     <?php echo "$error";?>
     <!--FORM END-->
 
-    <!--REGISTRO START-->
     <?php include("recursos/registro_validation.php")?>
-    <!--REGISTRO END-->
 
     <!--FORM REGISTRO START-->
     <h3>Nuevo registro</h3>
+    <?php echo $error?>
     <form action="recursos/registro_validation.php" method="POST">
         <fieldset>
         <label for="nombreR">Nombre:</label>
         <input type="text" name="nombreR" placeholder="Nombre" />
+        <?php echo $errorNombre;?>
         <label for="apellidoR">Apellidos:</label>
         <input type="text" name="apellidoR"placeholder="Apellido" />
+        <?php echo $errorApellido;?>
         <label for="userR">Usuario:</label>
         <input type="text" name="userR"placeholder="Usuario" />
+        <?php echo $errorUsuario;?>
         <label for="claveR">Contraseña:</label>
-        <input type="password" name="claveR"placeholder="Clave" />
+        <input type="password" name="claveR"placeholder="Clave" /><br><br>
+        <?php echo $errorPassword;?>
+        <label for="emailR">Email:</label>
+        <input type="text" name="emailR" placeholder="correo@ejemplo.com"/>
+        <?php echo $errorEmail;?>
+        <label for="githubR">Github:</label>
+        <input type="text" name="githubR" placerholder="github.com/ejemplo"/>
+        <?php echo $errorGithub;?>
         <input type="submit" name="registrar" value="Registrar">        
         </fieldset>
     </form>
