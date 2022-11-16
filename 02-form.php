@@ -1,7 +1,7 @@
 <?php
 
 //EN CASO DE TENER LOS DATOS DE INICIO DE SESSION
-//REDIRECCIONA A LA PAGINA BIENVENIDO
+//REDIRECCIONA A LA PAGINA sesion_iniciada.php
 if(isset($_SESSION['login_user_sys'])){
     header("location: sesion_iniciada.php");
     }
@@ -41,13 +41,13 @@ if(isset($_SESSION['login_user_sys'])){
     <form action="recursos/registro_validation.php" method="POST">
         <fieldset>
         <label for="nombreR">Nombre:</label>
-        <input type="text" class="form-control"  name="nombreR "placeholder="Nombre" />
+        <input type="text" name="nombreR" placeholder="Nombre" />
         <label for="apellidoR">Apellidos:</label>
-        <input type="text" class="form-control"  name="apellidoR"placeholder="Apellido" />
+        <input type="text" name="apellidoR"placeholder="Apellido" />
         <label for="userR">Usuario:</label>
-        <input type="text" class="form-control"  name="userR"placeholder="Usuario" />
+        <input type="text" name="userR"placeholder="Usuario" />
         <label for="claveR">Contraseña:</label>
-        <input type="password" class="form-control"  name="claveR"placeholder="Clave" />
+        <input type="password" name="claveR"placeholder="Clave" />
         <input type="submit" name="registrar" value="Registrar">        
         </fieldset>
     </form>
