@@ -1,7 +1,11 @@
 <?php
+include("recursos/session.php");
 include("conexion.php");
 
 if(isset($_POST['registrar'])){
+	//comprovaciones
+	if(empty($_POST['nombreR']))
+	//saneamiento
 	$nombre = mysqli_real_escape_string($mysqli,$_POST['nombreR']);
 	$apellido = mysqli_real_escape_string($mysqli,$_POST['apellidoR']);
 	$usuario = mysqli_real_escape_string($mysqli,$_POST['userR']);

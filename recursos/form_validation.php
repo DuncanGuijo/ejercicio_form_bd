@@ -1,5 +1,5 @@
 <?php
-session_start();
+include("recursos/session.php");
 $username= $password= $error = "";
 
 if(isset($_POST['submit'])){
