@@ -81,6 +81,7 @@ if(isset($_POST['registrar'])){
 							VALUES('$nombreR','$apellidoR','$userR','$passwordR','$emailR','A','U','$token','$githubR','$fecha_en_unix','$fecha_en_unix')";
         	$resultadousuario = $mysqli->query($sqlusuario);
 			$id = mysqli_insert_id($mysqli);
+			$_SESSION['login_user_sys']=$username;
 			if($resultadousuario > 0){
 				$_SESSION['login_user_sys']=$userR;
 				$textomail = '<h1>Confirmación cuenta</h1>';

@@ -1,4 +1,6 @@
 <?php
+include("conexion.php");
+include("session.php");
 $token = $_GET['token'];
 $id = $_GET['id'];
 $query = "SELECT * FROM usuarios WHERE token='$token' and id='$id'";
